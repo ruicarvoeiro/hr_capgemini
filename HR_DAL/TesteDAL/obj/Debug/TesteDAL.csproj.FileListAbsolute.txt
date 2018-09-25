@@ -1,0 +1,10 @@
+D:\Projetos\20180919\HR_DAL\TesteDAL\bin\Debug\TesteDAL.exe.config
+D:\Projetos\20180919\HR_DAL\TesteDAL\bin\Debug\TesteDAL.exe
+D:\Projetos\20180919\HR_DAL\TesteDAL\bin\Debug\TesteDAL.pdb
+D:\Projetos\20180919\HR_DAL\TesteDAL\bin\Debug\HR_DAL.dll
+D:\Projetos\20180919\HR_DAL\TesteDAL\bin\Debug\HR_DAL.pdb
+D:\Projetos\20180919\HR_DAL\TesteDAL\obj\Debug\TesteDAL.csprojAssemblyReference.cache
+D:\Projetos\20180919\HR_DAL\TesteDAL\obj\Debug\TesteDAL.csproj.CoreCompileInputs.cache
+D:\Projetos\20180919\HR_DAL\TesteDAL\obj\Debug\TesteDAL.csproj.CopyComplete
+D:\Projetos\20180919\HR_DAL\TesteDAL\obj\Debug\TesteDAL.exe
+D:\Projetos\20180919\HR_DAL\TesteDAL\obj\Debug\TesteDAL.pdb

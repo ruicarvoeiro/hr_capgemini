@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/WCFDAL.Contract" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/WCFDAL.Contract" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="ListaCandidatoSV">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:DataSV">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Lista" nillable="true" type="tns:ArrayOfCandidatoSV" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ListaCandidatoSV" nillable="true" type="tns:ListaCandidatoSV" />
+  <xs:complexType name="DataSV">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ErrorMessage" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="HasError" type="xs:boolean" />
+      <xs:element minOccurs="0" name="HasRows" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DataSV" nillable="true" type="tns:DataSV" />
+  <xs:complexType name="ArrayOfCandidatoSV">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="CandidatoSV" nillable="true" type="tns:CandidatoSV" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCandidatoSV" nillable="true" type="tns:ArrayOfCandidatoSV" />
+  <xs:complexType name="CandidatoSV">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="DataNascimento" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Escolaridade" type="xs:int" />
+      <xs:element name="Nif" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Nome" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="id" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CandidatoSV" nillable="true" type="tns:CandidatoSV" />
+  <xs:complexType name="ListaEntrevistasSV">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:DataSV">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Lista" nillable="true" type="tns:ArrayOfEntrevistasSV" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ListaEntrevistasSV" nillable="true" type="tns:ListaEntrevistasSV" />
+  <xs:complexType name="ArrayOfEntrevistasSV">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="EntrevistasSV" nillable="true" type="tns:EntrevistasSV" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfEntrevistasSV" nillable="true" type="tns:ArrayOfEntrevistasSV" />
+  <xs:complexType name="EntrevistasSV">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CandidatoId" type="xs:int" />
+      <xs:element minOccurs="0" name="DataHora" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Descricao" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="EntDescricao" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="EscaDescricao" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="IdEntrevista" type="xs:int" />
+      <xs:element minOccurs="0" name="Nome" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Nota" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="candidato" nillable="true" type="tns:CandidatoSV" />
+      <xs:element minOccurs="0" name="escalaAvaliacao" nillable="true" type="tns:EscalaAvaliacaoSV" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="EntrevistasSV" nillable="true" type="tns:EntrevistasSV" />
+  <xs:complexType name="EscalaAvaliacaoSV">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Descricao" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Nota" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="id" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="EscalaAvaliacaoSV" nillable="true" type="tns:EscalaAvaliacaoSV" />
+  <xs:complexType name="ListaEscalaAvaliacaoSV">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:DataSV">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Lista" nillable="true" type="tns:ArrayOfEscalaAvaliacaoSV" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ListaEscalaAvaliacaoSV" nillable="true" type="tns:ListaEscalaAvaliacaoSV" />
+  <xs:complexType name="ArrayOfEscalaAvaliacaoSV">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="EscalaAvaliacaoSV" nillable="true" type="tns:EscalaAvaliacaoSV" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfEscalaAvaliacaoSV" nillable="true" type="tns:ArrayOfEscalaAvaliacaoSV" />
+  <xs:complexType name="ListaTipoEscolaridadeSV">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:DataSV">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Lista" nillable="true" type="tns:ArrayOfTipoEscolaridadeSV" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ListaTipoEscolaridadeSV" nillable="true" type="tns:ListaTipoEscolaridadeSV" />
+  <xs:complexType name="ArrayOfTipoEscolaridadeSV">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="TipoEscolaridadeSV" nillable="true" type="tns:TipoEscolaridadeSV" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfTipoEscolaridadeSV" nillable="true" type="tns:ArrayOfTipoEscolaridadeSV" />
+  <xs:complexType name="TipoEscolaridadeSV">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Descricao" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="id" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="TipoEscolaridadeSV" nillable="true" type="tns:TipoEscolaridadeSV" />
+</xs:schema>

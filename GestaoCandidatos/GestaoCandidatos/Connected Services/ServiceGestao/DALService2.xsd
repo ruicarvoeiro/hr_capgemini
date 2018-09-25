@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:58635/DALService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/WCFDAL.Contract" />
+  <xs:element name="CriarCandidatos">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Nome" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Nif" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="DataNascimento" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="Escolaridade" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CriarCandidatosResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CriarCandidatosResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCandidatos">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Nome" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Nif" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCandidatosResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/WCFDAL.Contract" minOccurs="0" name="GetCandidatosResult" nillable="true" type="q1:ListaCandidatoSV" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateCandidatos">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="id" type="xs:int" />
+        <xs:element minOccurs="0" name="Nome" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Nif" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="DataNascimento" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="Escolaridade" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateCandidatosResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteCandidatos">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="id" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteCandidatosResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CriarEntrevistas">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Id" type="xs:int" />
+        <xs:element minOccurs="0" name="HoraEntrevista" type="xs:dateTime" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CriarEntrevistasResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CriarEntrevistasResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetEntrevistas">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Id" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetEntrevistasResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/WCFDAL.Contract" minOccurs="0" name="GetEntrevistasResult" nillable="true" type="q2:ListaEntrevistasSV" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateEntrevistas">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Id" type="xs:int" />
+        <xs:element minOccurs="0" name="HoraEntrevista" type="xs:dateTime" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateEntrevistasResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteEntrevistas">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="id" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteEntrevistasResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddAvaliacaoEntrevista">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="IdEntrevista" type="xs:int" />
+        <xs:element minOccurs="0" name="IdEscalaAval" type="xs:int" />
+        <xs:element minOccurs="0" name="Desc" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddAvaliacaoEntrevistaResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetEscalaAvaliacao">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetEscalaAvaliacaoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/WCFDAL.Contract" minOccurs="0" name="GetEscalaAvaliacaoResult" nillable="true" type="q3:ListaEscalaAvaliacaoSV" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTipoescolaridade">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTipoescolaridadeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/WCFDAL.Contract" minOccurs="0" name="GetTipoescolaridadeResult" nillable="true" type="q4:ListaTipoEscolaridadeSV" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

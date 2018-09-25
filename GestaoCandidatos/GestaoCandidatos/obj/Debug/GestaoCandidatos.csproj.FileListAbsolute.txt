@@ -1,0 +1,116 @@
+D:\Projetos\20180919\GestaoCandidatos\GestaoCandidatos\bin\GestaoCandidatos.dll.config
+D:\Projetos\20180919\GestaoCandidatos\GestaoCandidatos\bin\GestaoCandidatos.dll
+D:\Projetos\20180919\GestaoCandidatos\GestaoCandidatos\bin\GestaoCandidatos.pdb
+D:\Projetos\20180919\GestaoCandidatos\GestaoCandidatos\bin\roslyn\csc.exe
+D:\Projetos\20180919\GestaoCandidatos\GestaoCandidatos\bin\roslyn\csc.exe.config
+D:\Projetos\20180919\GestaoCandidatos\GestaoCandidatos\bin\roslyn\csc.rsp
+D:\Projetos\20180919\GestaoCandidatos\GestaoCandidatos\bin\roslyn\csi.exe
+D:\Projetos\20180919\GestaoCandidatos\GestaoCandidatos\bin\roslyn\csi.exe.config
+D:\Projetos\20180919\GestaoCandidatos\GestaoCandidatos\bin\roslyn\csi.rsp
+D:\Projetos\20180919\GestaoCandidatos\GestaoCandidatos\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\Projetos\20180919\GestaoCandidatos\GestaoCandidatos\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\Projetos\20180919\GestaoCandidatos\GestaoCandidatos\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+D:\Projetos\20180919\GestaoCandidatos\GestaoCandidatos\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\Projetos\20180919\GestaoCandidatos\GestaoCandidatos\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+D:\Projetos\20180919\GestaoCandidatos\GestaoCandidatos\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\Projetos\20180919\GestaoCandidatos\GestaoCandidatos\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\Projetos\20180919\GestaoCandidatos\GestaoCandidatos\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+D:\Projetos\20180919\GestaoCandidatos\GestaoCandidatos\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+D:\Projetos\20180919\GestaoCandidatos\GestaoCandidatos\bin\roslyn\Microsoft.Managed.Core.targets
+D:\Projetos\20180919\GestaoCandidatos\GestaoCandidatos\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\Projetos\20180919\GestaoCandidatos\GestaoCandidatos\bin\roslyn\System.AppContext.dll
+D:\Projetos\20180919\GestaoCandidatos\GestaoCandidatos\bin\roslyn\System.Collections.Immutable.dll
+D:\Projetos\20180919\GestaoCandidatos\GestaoCandidatos\bin\roslyn\System.Console.dll
+D:\Projetos\20180919\GestaoCandidatos\GestaoCandidatos\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+D:\Projetos\20180919\GestaoCandidatos\GestaoCandidatos\bin\roslyn\System.Diagnostics.StackTrace.dll
+D:\Projetos\20180919\GestaoCandidatos\GestaoCandidatos\bin\roslyn\System.IO.Compression.dll
+D:\Projetos\20180919\GestaoCandidatos\GestaoCandidatos\bin\roslyn\System.IO.FileSystem.dll
+D:\Projetos\20180919\GestaoCandidatos\GestaoCandidatos\bin\roslyn\System.IO.FileSystem.Primitives.dll
+D:\Projetos\20180919\GestaoCandidatos\GestaoCandidatos\bin\roslyn\System.IO.Pipes.AccessControl.dll
+D:\Projetos\20180919\GestaoCandidatos\GestaoCandidatos\bin\roslyn\System.IO.Pipes.dll
+D:\Projetos\20180919\GestaoCandidatos\GestaoCandidatos\bin\roslyn\System.Reflection.Metadata.dll
+D:\Projetos\20180919\GestaoCandidatos\GestaoCandidatos\bin\roslyn\System.Security.AccessControl.dll
+D:\Projetos\20180919\GestaoCandidatos\GestaoCandidatos\bin\roslyn\System.Security.Claims.dll
+D:\Projetos\20180919\GestaoCandidatos\GestaoCandidatos\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+D:\Projetos\20180919\GestaoCandidatos\GestaoCandidatos\bin\roslyn\System.Security.Cryptography.Encoding.dll
+D:\Projetos\20180919\GestaoCandidatos\GestaoCandidatos\bin\roslyn\System.Security.Cryptography.Primitives.dll
+D:\Projetos\20180919\GestaoCandidatos\GestaoCandidatos\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+D:\Projetos\20180919\GestaoCandidatos\GestaoCandidatos\bin\roslyn\System.Security.Principal.Windows.dll
+D:\Projetos\20180919\GestaoCandidatos\GestaoCandidatos\bin\roslyn\System.Text.Encoding.CodePages.dll
+D:\Projetos\20180919\GestaoCandidatos\GestaoCandidatos\bin\roslyn\System.ValueTuple.dll
+D:\Projetos\20180919\GestaoCandidatos\GestaoCandidatos\bin\roslyn\System.Xml.ReaderWriter.dll
+D:\Projetos\20180919\GestaoCandidatos\GestaoCandidatos\bin\roslyn\System.Xml.XmlDocument.dll
+D:\Projetos\20180919\GestaoCandidatos\GestaoCandidatos\bin\roslyn\System.Xml.XPath.dll
+D:\Projetos\20180919\GestaoCandidatos\GestaoCandidatos\bin\roslyn\System.Xml.XPath.XDocument.dll
+D:\Projetos\20180919\GestaoCandidatos\GestaoCandidatos\bin\roslyn\vbc.exe
+D:\Projetos\20180919\GestaoCandidatos\GestaoCandidatos\bin\roslyn\vbc.exe.config
+D:\Projetos\20180919\GestaoCandidatos\GestaoCandidatos\bin\roslyn\vbc.rsp
+D:\Projetos\20180919\GestaoCandidatos\GestaoCandidatos\bin\roslyn\VBCSCompiler.exe
+D:\Projetos\20180919\GestaoCandidatos\GestaoCandidatos\bin\roslyn\VBCSCompiler.exe.config
+D:\Projetos\20180919\GestaoCandidatos\GestaoCandidatos\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\Projetos\20180919\GestaoCandidatos\GestaoCandidatos\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\Projetos\20180919\GestaoCandidatos\GestaoCandidatos\obj\Debug\GestaoCandidatos.csproj.CoreCompileInputs.cache
+D:\Projetos\20180919\GestaoCandidatos\GestaoCandidatos\obj\Debug\GestaoCandidatos.csproj.CopyComplete
+D:\Projetos\20180919\GestaoCandidatos\GestaoCandidatos\obj\Debug\GestaoCandidatos.dll
+D:\Projetos\20180919\GestaoCandidatos\GestaoCandidatos\obj\Debug\GestaoCandidatos.pdb
+D:\Projetos\20180919\GestaoCandidatos\GestaoCandidatos\obj\Debug\GestaoCandidatos.csprojAssemblyReference.cache
+D:\Projetos\Projeto_final .net\GestaoCandidatos\GestaoCandidatos\obj\Debug\GestaoCandidatos.csprojAssemblyReference.cache
+D:\Projetos\Projeto_final .net\GestaoCandidatos\GestaoCandidatos\obj\Debug\GestaoCandidatos.csproj.CoreCompileInputs.cache
+D:\Projetos\Projeto_final .net\GestaoCandidatos\GestaoCandidatos\obj\Debug\GestaoCandidatos.dll
+D:\Projetos\Projeto_final .net\GestaoCandidatos\GestaoCandidatos\obj\Debug\GestaoCandidatos.pdb
+D:\Projetos\Projeto_final .net\GestaoCandidatos\GestaoCandidatos\bin\GestaoCandidatos.dll.config
+D:\Projetos\Projeto_final .net\GestaoCandidatos\GestaoCandidatos\bin\GestaoCandidatos.dll
+D:\Projetos\Projeto_final .net\GestaoCandidatos\GestaoCandidatos\bin\GestaoCandidatos.pdb
+D:\Projetos\Projeto_final .net\GestaoCandidatos\GestaoCandidatos\bin\roslyn\csc.exe
+D:\Projetos\Projeto_final .net\GestaoCandidatos\GestaoCandidatos\bin\roslyn\csc.exe.config
+D:\Projetos\Projeto_final .net\GestaoCandidatos\GestaoCandidatos\bin\roslyn\csc.rsp
+D:\Projetos\Projeto_final .net\GestaoCandidatos\GestaoCandidatos\bin\roslyn\csi.exe
+D:\Projetos\Projeto_final .net\GestaoCandidatos\GestaoCandidatos\bin\roslyn\csi.exe.config
+D:\Projetos\Projeto_final .net\GestaoCandidatos\GestaoCandidatos\bin\roslyn\csi.rsp
+D:\Projetos\Projeto_final .net\GestaoCandidatos\GestaoCandidatos\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\Projetos\Projeto_final .net\GestaoCandidatos\GestaoCandidatos\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\Projetos\Projeto_final .net\GestaoCandidatos\GestaoCandidatos\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+D:\Projetos\Projeto_final .net\GestaoCandidatos\GestaoCandidatos\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\Projetos\Projeto_final .net\GestaoCandidatos\GestaoCandidatos\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+D:\Projetos\Projeto_final .net\GestaoCandidatos\GestaoCandidatos\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\Projetos\Projeto_final .net\GestaoCandidatos\GestaoCandidatos\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\Projetos\Projeto_final .net\GestaoCandidatos\GestaoCandidatos\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+D:\Projetos\Projeto_final .net\GestaoCandidatos\GestaoCandidatos\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+D:\Projetos\Projeto_final .net\GestaoCandidatos\GestaoCandidatos\bin\roslyn\Microsoft.Managed.Core.targets
+D:\Projetos\Projeto_final .net\GestaoCandidatos\GestaoCandidatos\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\Projetos\Projeto_final .net\GestaoCandidatos\GestaoCandidatos\bin\roslyn\System.AppContext.dll
+D:\Projetos\Projeto_final .net\GestaoCandidatos\GestaoCandidatos\bin\roslyn\System.Collections.Immutable.dll
+D:\Projetos\Projeto_final .net\GestaoCandidatos\GestaoCandidatos\bin\roslyn\System.Console.dll
+D:\Projetos\Projeto_final .net\GestaoCandidatos\GestaoCandidatos\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+D:\Projetos\Projeto_final .net\GestaoCandidatos\GestaoCandidatos\bin\roslyn\System.Diagnostics.StackTrace.dll
+D:\Projetos\Projeto_final .net\GestaoCandidatos\GestaoCandidatos\bin\roslyn\System.IO.Compression.dll
+D:\Projetos\Projeto_final .net\GestaoCandidatos\GestaoCandidatos\bin\roslyn\System.IO.FileSystem.dll
+D:\Projetos\Projeto_final .net\GestaoCandidatos\GestaoCandidatos\bin\roslyn\System.IO.FileSystem.Primitives.dll
+D:\Projetos\Projeto_final .net\GestaoCandidatos\GestaoCandidatos\bin\roslyn\System.IO.Pipes.AccessControl.dll
+D:\Projetos\Projeto_final .net\GestaoCandidatos\GestaoCandidatos\bin\roslyn\System.IO.Pipes.dll
+D:\Projetos\Projeto_final .net\GestaoCandidatos\GestaoCandidatos\bin\roslyn\System.Reflection.Metadata.dll
+D:\Projetos\Projeto_final .net\GestaoCandidatos\GestaoCandidatos\bin\roslyn\System.Security.AccessControl.dll
+D:\Projetos\Projeto_final .net\GestaoCandidatos\GestaoCandidatos\bin\roslyn\System.Security.Claims.dll
+D:\Projetos\Projeto_final .net\GestaoCandidatos\GestaoCandidatos\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+D:\Projetos\Projeto_final .net\GestaoCandidatos\GestaoCandidatos\bin\roslyn\System.Security.Cryptography.Encoding.dll
+D:\Projetos\Projeto_final .net\GestaoCandidatos\GestaoCandidatos\bin\roslyn\System.Security.Cryptography.Primitives.dll
+D:\Projetos\Projeto_final .net\GestaoCandidatos\GestaoCandidatos\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+D:\Projetos\Projeto_final .net\GestaoCandidatos\GestaoCandidatos\bin\roslyn\System.Security.Principal.Windows.dll
+D:\Projetos\Projeto_final .net\GestaoCandidatos\GestaoCandidatos\bin\roslyn\System.Text.Encoding.CodePages.dll
+D:\Projetos\Projeto_final .net\GestaoCandidatos\GestaoCandidatos\bin\roslyn\System.ValueTuple.dll
+D:\Projetos\Projeto_final .net\GestaoCandidatos\GestaoCandidatos\bin\roslyn\System.Xml.ReaderWriter.dll
+D:\Projetos\Projeto_final .net\GestaoCandidatos\GestaoCandidatos\bin\roslyn\System.Xml.XmlDocument.dll
+D:\Projetos\Projeto_final .net\GestaoCandidatos\GestaoCandidatos\bin\roslyn\System.Xml.XPath.dll
+D:\Projetos\Projeto_final .net\GestaoCandidatos\GestaoCandidatos\bin\roslyn\System.Xml.XPath.XDocument.dll
+D:\Projetos\Projeto_final .net\GestaoCandidatos\GestaoCandidatos\bin\roslyn\vbc.exe
+D:\Projetos\Projeto_final .net\GestaoCandidatos\GestaoCandidatos\bin\roslyn\vbc.exe.config
+D:\Projetos\Projeto_final .net\GestaoCandidatos\GestaoCandidatos\bin\roslyn\vbc.rsp
+D:\Projetos\Projeto_final .net\GestaoCandidatos\GestaoCandidatos\bin\roslyn\VBCSCompiler.exe
+D:\Projetos\Projeto_final .net\GestaoCandidatos\GestaoCandidatos\bin\roslyn\VBCSCompiler.exe.config
+D:\Projetos\Projeto_final .net\GestaoCandidatos\GestaoCandidatos\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\Projetos\Projeto_final .net\GestaoCandidatos\GestaoCandidatos\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\Projetos\Projeto_final .net\GestaoCandidatos\GestaoCandidatos\obj\Debug\GestaoCandidatos.csproj.CopyComplete
+D:\Projetos\Projeto_final .net\GestaoCandidatos\GestaoCandidatos\bin\EntityFramework.dll
+D:\Projetos\Projeto_final .net\GestaoCandidatos\GestaoCandidatos\bin\EntityFramework.SqlServer.dll
+D:\Projetos\Projeto_final .net\GestaoCandidatos\GestaoCandidatos\bin\EntityFramework.xml
+D:\Projetos\Projeto_final .net\GestaoCandidatos\GestaoCandidatos\bin\EntityFramework.SqlServer.xml

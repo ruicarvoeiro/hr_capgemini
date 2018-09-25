@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="HumanResourcesModelStoreContainer" CdmEntityContainer="HumanResourcesEntities">
+    <EntitySetMapping Name="Candidato">
+      <EntityTypeMapping TypeName="HumanResourcesModel.Candidato">
+        <MappingFragment StoreEntitySet="Candidato">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Nome" ColumnName="Nome" />
+          <ScalarProperty Name="Nif" ColumnName="Nif" />
+          <ScalarProperty Name="DataNasc" ColumnName="DataNasc" />
+          <ScalarProperty Name="TipoEscolaridadeId" ColumnName="TipoEscolaridadeId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Entrevistas">
+      <EntityTypeMapping TypeName="HumanResourcesModel.Entrevistas">
+        <MappingFragment StoreEntitySet="Entrevistas">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="CandidatoId" ColumnName="CandidatoId" />
+          <ScalarProperty Name="DataHora" ColumnName="DataHora" />
+          <ScalarProperty Name="EscalaAvaliacaoId" ColumnName="EscalaAvaliacaoId" />
+          <ScalarProperty Name="Descricao" ColumnName="Descricao" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EscalaAvaliacao">
+      <EntityTypeMapping TypeName="HumanResourcesModel.EscalaAvaliacao">
+        <MappingFragment StoreEntitySet="EscalaAvaliacao">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Descricao" ColumnName="Descricao" />
+          <ScalarProperty Name="Nota" ColumnName="Nota" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TipoEscolaridade">
+      <EntityTypeMapping TypeName="HumanResourcesModel.TipoEscolaridade">
+        <MappingFragment StoreEntitySet="TipoEscolaridade">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Descricao" ColumnName="Descricao" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="ServiceGestaoSV" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:58635/DALService.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:58635/DALService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:58635/DALService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/WCFDAL.Contract" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IServiceHR_CriarCandidatos_InputMessage">
+    <wsdl:part name="parameters" element="tns:CriarCandidatos" />
+  </wsdl:message>
+  <wsdl:message name="IServiceHR_CriarCandidatos_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CriarCandidatosResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceHR_GetCandidatos_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCandidatos" />
+  </wsdl:message>
+  <wsdl:message name="IServiceHR_GetCandidatos_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCandidatosResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceHR_UpdateCandidatos_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateCandidatos" />
+  </wsdl:message>
+  <wsdl:message name="IServiceHR_UpdateCandidatos_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateCandidatosResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceHR_DeleteCandidatos_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteCandidatos" />
+  </wsdl:message>
+  <wsdl:message name="IServiceHR_DeleteCandidatos_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteCandidatosResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceHR_CriarEntrevistas_InputMessage">
+    <wsdl:part name="parameters" element="tns:CriarEntrevistas" />
+  </wsdl:message>
+  <wsdl:message name="IServiceHR_CriarEntrevistas_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CriarEntrevistasResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceHR_GetEntrevistas_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetEntrevistas" />
+  </wsdl:message>
+  <wsdl:message name="IServiceHR_GetEntrevistas_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetEntrevistasResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceHR_UpdateEntrevistas_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateEntrevistas" />
+  </wsdl:message>
+  <wsdl:message name="IServiceHR_UpdateEntrevistas_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateEntrevistasResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceHR_DeleteEntrevistas_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteEntrevistas" />
+  </wsdl:message>
+  <wsdl:message name="IServiceHR_DeleteEntrevistas_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteEntrevistasResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceHR_AddAvaliacaoEntrevista_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddAvaliacaoEntrevista" />
+  </wsdl:message>
+  <wsdl:message name="IServiceHR_AddAvaliacaoEntrevista_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddAvaliacaoEntrevistaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceHR_GetEscalaAvaliacao_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetEscalaAvaliacao" />
+  </wsdl:message>
+  <wsdl:message name="IServiceHR_GetEscalaAvaliacao_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetEscalaAvaliacaoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceHR_GetTipoescolaridade_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetTipoescolaridade" />
+  </wsdl:message>
+  <wsdl:message name="IServiceHR_GetTipoescolaridade_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetTipoescolaridadeResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IServiceHR">
+    <wsdl:operation name="CriarCandidatos">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceHR/CriarCandidatos" message="tns:IServiceHR_CriarCandidatos_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceHR/CriarCandidatosResponse" message="tns:IServiceHR_CriarCandidatos_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCandidatos">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceHR/GetCandidatos" message="tns:IServiceHR_GetCandidatos_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceHR/GetCandidatosResponse" message="tns:IServiceHR_GetCandidatos_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateCandidatos">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceHR/UpdateCandidatos" message="tns:IServiceHR_UpdateCandidatos_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceHR/UpdateCandidatosResponse" message="tns:IServiceHR_UpdateCandidatos_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteCandidatos">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceHR/DeleteCandidatos" message="tns:IServiceHR_DeleteCandidatos_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceHR/DeleteCandidatosResponse" message="tns:IServiceHR_DeleteCandidatos_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CriarEntrevistas">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceHR/CriarEntrevistas" message="tns:IServiceHR_CriarEntrevistas_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceHR/CriarEntrevistasResponse" message="tns:IServiceHR_CriarEntrevistas_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEntrevistas">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceHR/GetEntrevistas" message="tns:IServiceHR_GetEntrevistas_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceHR/GetEntrevistasResponse" message="tns:IServiceHR_GetEntrevistas_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateEntrevistas">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceHR/UpdateEntrevistas" message="tns:IServiceHR_UpdateEntrevistas_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceHR/UpdateEntrevistasResponse" message="tns:IServiceHR_UpdateEntrevistas_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteEntrevistas">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceHR/DeleteEntrevistas" message="tns:IServiceHR_DeleteEntrevistas_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceHR/DeleteEntrevistasResponse" message="tns:IServiceHR_DeleteEntrevistas_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddAvaliacaoEntrevista">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceHR/AddAvaliacaoEntrevista" message="tns:IServiceHR_AddAvaliacaoEntrevista_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceHR/AddAvaliacaoEntrevistaResponse" message="tns:IServiceHR_AddAvaliacaoEntrevista_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEscalaAvaliacao">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceHR/GetEscalaAvaliacao" message="tns:IServiceHR_GetEscalaAvaliacao_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceHR/GetEscalaAvaliacaoResponse" message="tns:IServiceHR_GetEscalaAvaliacao_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTipoescolaridade">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceHR/GetTipoescolaridade" message="tns:IServiceHR_GetTipoescolaridade_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceHR/GetTipoescolaridadeResponse" message="tns:IServiceHR_GetTipoescolaridade_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IServiceHR" type="tns:IServiceHR">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="CriarCandidatos">
+      <soap:operation soapAction="http://tempuri.org/IServiceHR/CriarCandidatos" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCandidatos">
+      <soap:operation soapAction="http://tempuri.org/IServiceHR/GetCandidatos" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateCandidatos">
+      <soap:operation soapAction="http://tempuri.org/IServiceHR/UpdateCandidatos" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteCandidatos">
+      <soap:operation soapAction="http://tempuri.org/IServiceHR/DeleteCandidatos" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CriarEntrevistas">
+      <soap:operation soapAction="http://tempuri.org/IServiceHR/CriarEntrevistas" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEntrevistas">
+      <soap:operation soapAction="http://tempuri.org/IServiceHR/GetEntrevistas" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateEntrevistas">
+      <soap:operation soapAction="http://tempuri.org/IServiceHR/UpdateEntrevistas" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteEntrevistas">
+      <soap:operation soapAction="http://tempuri.org/IServiceHR/DeleteEntrevistas" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddAvaliacaoEntrevista">
+      <soap:operation soapAction="http://tempuri.org/IServiceHR/AddAvaliacaoEntrevista" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEscalaAvaliacao">
+      <soap:operation soapAction="http://tempuri.org/IServiceHR/GetEscalaAvaliacao" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTipoescolaridade">
+      <soap:operation soapAction="http://tempuri.org/IServiceHR/GetTipoescolaridade" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ServiceGestaoSV">
+    <wsdl:port name="BasicHttpBinding_IServiceHR" binding="tns:BasicHttpBinding_IServiceHR">
+      <soap:address location="http://localhost:58635/DALService.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

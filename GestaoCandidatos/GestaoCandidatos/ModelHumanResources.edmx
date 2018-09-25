@@ -1,0 +1,231 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="HumanResourcesModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Candidato">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Nome" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Nif" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="DataNasc" Type="date" Nullable="false" />
+          <Property Name="TipoEscolaridadeId" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Entrevistas">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="CandidatoId" Type="int" Nullable="false" />
+          <Property Name="DataHora" Type="datetime" Nullable="false" />
+          <Property Name="EscalaAvaliacaoId" Type="int" />
+          <Property Name="Descricao" Type="nvarchar" MaxLength="200" />
+        </EntityType>
+        <EntityType Name="EscalaAvaliacao">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Descricao" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="Nota" Type="nvarchar" MaxLength="10" Nullable="false" />
+        </EntityType>
+        <EntityType Name="TipoEscolaridade">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Descricao" Type="nvarchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <Association Name="FK_Candidato_TipoEscolaridade">
+          <End Role="TipoEscolaridade" Type="Self.TipoEscolaridade" Multiplicity="1" />
+          <End Role="Candidato" Type="Self.Candidato" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TipoEscolaridade">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Candidato">
+              <PropertyRef Name="TipoEscolaridadeId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Entrevistas_EscalaAvaliacao">
+          <End Role="EscalaAvaliacao" Type="Self.EscalaAvaliacao" Multiplicity="0..1" />
+          <End Role="Entrevistas" Type="Self.Entrevistas" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="EscalaAvaliacao">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Entrevistas">
+              <PropertyRef Name="EscalaAvaliacaoId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="HumanResourcesModelStoreContainer">
+          <EntitySet Name="Candidato" EntityType="Self.Candidato" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Entrevistas" EntityType="Self.Entrevistas" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="EscalaAvaliacao" EntityType="Self.EscalaAvaliacao" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TipoEscolaridade" EntityType="Self.TipoEscolaridade" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_Candidato_TipoEscolaridade" Association="Self.FK_Candidato_TipoEscolaridade">
+            <End Role="TipoEscolaridade" EntitySet="TipoEscolaridade" />
+            <End Role="Candidato" EntitySet="Candidato" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Entrevistas_EscalaAvaliacao" Association="Self.FK_Entrevistas_EscalaAvaliacao">
+            <End Role="EscalaAvaliacao" EntitySet="EscalaAvaliacao" />
+            <End Role="Entrevistas" EntitySet="Entrevistas" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="HumanResourcesModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Candidato">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Nome" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Nif" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="DataNasc" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="TipoEscolaridadeId" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="TipoEscolaridade" Relationship="Self.FK_Candidato_TipoEscolaridade" FromRole="Candidato" ToRole="TipoEscolaridade" />
+        </EntityType>
+        <EntityType Name="Entrevistas">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CandidatoId" Type="Int32" Nullable="false" />
+          <Property Name="DataHora" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="EscalaAvaliacaoId" Type="Int32" />
+          <Property Name="Descricao" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="EscalaAvaliacao" Relationship="Self.FK_Entrevistas_EscalaAvaliacao" FromRole="Entrevistas" ToRole="EscalaAvaliacao" />
+        </EntityType>
+        <EntityType Name="EscalaAvaliacao">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Descricao" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Nota" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="Entrevistas" Relationship="Self.FK_Entrevistas_EscalaAvaliacao" FromRole="EscalaAvaliacao" ToRole="Entrevistas" />
+        </EntityType>
+        <EntityType Name="TipoEscolaridade">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Descricao" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="Candidato" Relationship="Self.FK_Candidato_TipoEscolaridade" FromRole="TipoEscolaridade" ToRole="Candidato" />
+        </EntityType>
+        <Association Name="FK_Candidato_TipoEscolaridade">
+          <End Role="TipoEscolaridade" Type="Self.TipoEscolaridade" Multiplicity="1" />
+          <End Role="Candidato" Type="Self.Candidato" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TipoEscolaridade">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Candidato">
+              <PropertyRef Name="TipoEscolaridadeId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Entrevistas_EscalaAvaliacao">
+          <End Role="EscalaAvaliacao" Type="Self.EscalaAvaliacao" Multiplicity="0..1" />
+          <End Role="Entrevistas" Type="Self.Entrevistas" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="EscalaAvaliacao">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Entrevistas">
+              <PropertyRef Name="EscalaAvaliacaoId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="HumanResourcesEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Candidato" EntityType="Self.Candidato" />
+          <EntitySet Name="Entrevistas" EntityType="Self.Entrevistas" />
+          <EntitySet Name="EscalaAvaliacao" EntityType="Self.EscalaAvaliacao" />
+          <EntitySet Name="TipoEscolaridade" EntityType="Self.TipoEscolaridade" />
+          <AssociationSet Name="FK_Candidato_TipoEscolaridade" Association="Self.FK_Candidato_TipoEscolaridade">
+            <End Role="TipoEscolaridade" EntitySet="TipoEscolaridade" />
+            <End Role="Candidato" EntitySet="Candidato" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Entrevistas_EscalaAvaliacao" Association="Self.FK_Entrevistas_EscalaAvaliacao">
+            <End Role="EscalaAvaliacao" EntitySet="EscalaAvaliacao" />
+            <End Role="Entrevistas" EntitySet="Entrevistas" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="HumanResourcesModelStoreContainer" CdmEntityContainer="HumanResourcesEntities">
+          <EntitySetMapping Name="Candidato">
+            <EntityTypeMapping TypeName="HumanResourcesModel.Candidato">
+              <MappingFragment StoreEntitySet="Candidato">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Nome" ColumnName="Nome" />
+                <ScalarProperty Name="Nif" ColumnName="Nif" />
+                <ScalarProperty Name="DataNasc" ColumnName="DataNasc" />
+                <ScalarProperty Name="TipoEscolaridadeId" ColumnName="TipoEscolaridadeId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Entrevistas">
+            <EntityTypeMapping TypeName="HumanResourcesModel.Entrevistas">
+              <MappingFragment StoreEntitySet="Entrevistas">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="CandidatoId" ColumnName="CandidatoId" />
+                <ScalarProperty Name="DataHora" ColumnName="DataHora" />
+                <ScalarProperty Name="EscalaAvaliacaoId" ColumnName="EscalaAvaliacaoId" />
+                <ScalarProperty Name="Descricao" ColumnName="Descricao" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="EscalaAvaliacao">
+            <EntityTypeMapping TypeName="HumanResourcesModel.EscalaAvaliacao">
+              <MappingFragment StoreEntitySet="EscalaAvaliacao">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Descricao" ColumnName="Descricao" />
+                <ScalarProperty Name="Nota" ColumnName="Nota" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TipoEscolaridade">
+            <EntityTypeMapping TypeName="HumanResourcesModel.TipoEscolaridade">
+              <MappingFragment StoreEntitySet="TipoEscolaridade">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Descricao" ColumnName="Descricao" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

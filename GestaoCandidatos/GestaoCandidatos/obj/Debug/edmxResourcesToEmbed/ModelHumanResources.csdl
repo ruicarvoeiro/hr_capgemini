@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="HumanResourcesModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Candidato">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Nome" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Nif" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="DataNasc" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="TipoEscolaridadeId" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="TipoEscolaridade" Relationship="Self.FK_Candidato_TipoEscolaridade" FromRole="Candidato" ToRole="TipoEscolaridade" />
+  </EntityType>
+  <EntityType Name="Entrevistas">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CandidatoId" Type="Int32" Nullable="false" />
+    <Property Name="DataHora" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="EscalaAvaliacaoId" Type="Int32" />
+    <Property Name="Descricao" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="EscalaAvaliacao" Relationship="Self.FK_Entrevistas_EscalaAvaliacao" FromRole="Entrevistas" ToRole="EscalaAvaliacao" />
+  </EntityType>
+  <EntityType Name="EscalaAvaliacao">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Descricao" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Nota" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="Entrevistas" Relationship="Self.FK_Entrevistas_EscalaAvaliacao" FromRole="EscalaAvaliacao" ToRole="Entrevistas" />
+  </EntityType>
+  <EntityType Name="TipoEscolaridade">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Descricao" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="Candidato" Relationship="Self.FK_Candidato_TipoEscolaridade" FromRole="TipoEscolaridade" ToRole="Candidato" />
+  </EntityType>
+  <Association Name="FK_Candidato_TipoEscolaridade">
+    <End Role="TipoEscolaridade" Type="Self.TipoEscolaridade" Multiplicity="1" />
+    <End Role="Candidato" Type="Self.Candidato" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TipoEscolaridade">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Candidato">
+        <PropertyRef Name="TipoEscolaridadeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Entrevistas_EscalaAvaliacao">
+    <End Role="EscalaAvaliacao" Type="Self.EscalaAvaliacao" Multiplicity="0..1" />
+    <End Role="Entrevistas" Type="Self.Entrevistas" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EscalaAvaliacao">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Entrevistas">
+        <PropertyRef Name="EscalaAvaliacaoId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="HumanResourcesEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Candidato" EntityType="Self.Candidato" />
+    <EntitySet Name="Entrevistas" EntityType="Self.Entrevistas" />
+    <EntitySet Name="EscalaAvaliacao" EntityType="Self.EscalaAvaliacao" />
+    <EntitySet Name="TipoEscolaridade" EntityType="Self.TipoEscolaridade" />
+    <AssociationSet Name="FK_Candidato_TipoEscolaridade" Association="Self.FK_Candidato_TipoEscolaridade">
+      <End Role="TipoEscolaridade" EntitySet="TipoEscolaridade" />
+      <End Role="Candidato" EntitySet="Candidato" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Entrevistas_EscalaAvaliacao" Association="Self.FK_Entrevistas_EscalaAvaliacao">
+      <End Role="EscalaAvaliacao" EntitySet="EscalaAvaliacao" />
+      <End Role="Entrevistas" EntitySet="Entrevistas" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

@@ -1,0 +1,32 @@
+﻿** Highlights
+     Tables that will be rebuilt
+       None
+     Clustered indexes that will be dropped
+       None
+     Clustered indexes that will be created
+       None
+     Possible data issues
+       None
+
+** User actions
+     Create
+       [dbo].[Candidato] (Table)
+       [dbo].[Candidato].[IX_Candidato_Nif] (Index)
+       [dbo].[Entrevistas] (Table)
+       [dbo].[EscalaAvaliacao] (Table)
+       [dbo].[TipoEscolaridade] (Table)
+       [dbo].[FK_Candidato_TipoEscolaridade] (Foreign Key)
+       [dbo].[FK_Entrevistas_EscalaAvaliacao] (Foreign Key)
+       [dbo].[AddAvaliacaoEntrevista] (Procedure)
+       [dbo].[CreateCandidato] (Procedure)
+       [dbo].[CreateEntrevista] (Procedure)
+       [dbo].[DeleteCandidato] (Procedure)
+       [dbo].[DeleteEntrevista] (Procedure)
+       [dbo].[GetCandidatos] (Procedure)
+       [dbo].[GetEntrevistas] (Procedure)
+       [dbo].[GetEscalaAvaliacao] (Procedure)
+       [dbo].[GetTipoEscolaridade] (Procedure)
+       [dbo].[UpdateCandidato] (Procedure)
+       [dbo].[UpdateEntrevista] (Procedure)
+
+** Supporting actions

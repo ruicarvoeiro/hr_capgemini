@@ -1,0 +1,52 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Master.master.cs" Inherits="GestaoCandidatos.Master" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+     <title>Gestão de Candidatos</title>
+     <link href="Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <script src="Scripts/bootstrap.min.js"></script>
+    <asp:ContentPlaceHolder ID="head" runat="server"></asp:ContentPlaceHolder>
+</head>
+<body>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#menu" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="Index.aspx">Gestão de Candidatos</a>
+            </div>
+            <div class="collapse navbar-collapse" id="menu">
+                <ul class="nav navbar-nav">
+                    <li id="Candidatos" runat="server" class=""><a href="Candidatos.aspx">Manipulação de Candidatos</a></li>
+                    <li id="Agendamento" runat="server"><a runat="server" href="Entrevistas.aspx">Entrevistas</a></li>
+                    <li id="Classificação" runat="server"><a runat="server" href="Classificacoes.aspx">Classificação</a></li>
+                </ul>
+
+            </div>
+        </div>
+    </nav>
+    <form id="form1" runat="server">
+        <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
+    <footer>
+        <br />
+            <asp:HyperLink id="hyperlink1" 
+                  NavigateUrl="https://www.capgemini.com/"
+                  runat="server">
+                <img ID ="logo" width="250" height="85" style="align-content:center; align-items:center; align-self:center" src="img/logo.jpg"/>
+
+            </asp:HyperLink>
+            <p>&copy; <%: DateTime.Now.Year %> - HR - Capgemini</p>
+        </footer>
+</body>
+</html>

@@ -1,0 +1,1358 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DataSchemaModel FileFormatVersion="1.2" SchemaVersion="2.9" DspName="Microsoft.Data.Tools.Schema.Sql.Sql130DatabaseSchemaProvider" CollationLcid="1033" CollationCaseSensitive="False" xmlns="http://schemas.microsoft.com/sqlserver/dac/Serialization/2012/02">
+	<Header>
+		<CustomData Category="AnsiNulls">
+			<Metadata Name="AnsiNulls" Value="True" />
+		</CustomData>
+		<CustomData Category="QuotedIdentifier">
+			<Metadata Name="QuotedIdentifier" Value="True" />
+		</CustomData>
+		<CustomData Category="CompatibilityMode">
+			<Metadata Name="CompatibilityMode" Value="130" />
+		</CustomData>
+		<CustomData Category="Reference" Type="Assembly">
+			<Metadata Name="LogicalName" Value="HumanResourcesDB.dll" />
+			<Metadata Name="FileName" Value="C:\JREQUIO\CAPGEMINI\FORMAÇÃO\(DOT)NET\2018_09_06\PROJECTO\HUMANRESOURCES\HUMANRESOURCESDB\OBJ\DEBUG\HUMANRESOURCESDB.DLL" />
+			<Metadata Name="AssemblyName" Value="HumanResourcesDB" />
+			<Metadata Name="PermissionSet" Value="SAFE" />
+			<Metadata Name="Owner" Value="" />
+			<Metadata Name="GenerateSqlClrDdl" Value="True" />
+			<Metadata Name="IsVisible" Value="True" />
+			<Metadata Name="IsModelAware" Value="True" />
+			<Metadata Name="SkipCreationIfEmpty" Value="True" />
+			<Metadata Name="AssemblySymbolsName" Value="C:\JREQUIO\Capgemini\Formação\(dot)Net\2018_09_06\Projecto\HumanResources\HumanResourcesDB\obj\Debug\HumanResourcesDB.pdb" />
+		</CustomData>
+		<CustomData Category="SqlCmdVariables" Type="SqlCmdVariable" />
+	</Header>
+	<Model>
+		<Element Type="SqlDatabaseOptions">
+			<Property Name="Collation" Value="SQL_Latin1_General_CP1_CI_AS" />
+			<Property Name="IsAnsiNullDefaultOn" Value="True" />
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Property Name="IsAnsiWarningsOn" Value="True" />
+			<Property Name="IsArithAbortOn" Value="True" />
+			<Property Name="IsConcatNullYieldsNullOn" Value="True" />
+			<Property Name="IsTornPageProtectionOn" Value="False" />
+			<Property Name="IsFullTextEnabled" Value="True" />
+			<Property Name="PageVerifyMode" Value="3" />
+			<Property Name="DefaultLanguage" Value="" />
+			<Property Name="DefaultFullTextLanguage" Value="" />
+			<Property Name="QueryStoreStaleQueryThreshold" Value="367" />
+			<Relationship Name="DefaultFilegroup">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[PRIMARY]" />
+				</Entry>
+			</Relationship>
+		</Element>
+		<Element Type="SqlPrimaryKeyConstraint">
+			<Relationship Name="ColumnSpecifications">
+				<Entry>
+					<Element Type="SqlIndexedColumnSpecification">
+						<Relationship Name="Column">
+							<Entry>
+								<References Name="[dbo].[EscalaAvaliacao].[Id]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="DefiningTable">
+				<Entry>
+					<References Name="[dbo].[EscalaAvaliacao]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="3" />
+		</Element>
+		<Element Type="SqlPrimaryKeyConstraint">
+			<Relationship Name="ColumnSpecifications">
+				<Entry>
+					<Element Type="SqlIndexedColumnSpecification">
+						<Relationship Name="Column">
+							<Entry>
+								<References Name="[dbo].[Entrevistas].[Id]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="DefiningTable">
+				<Entry>
+					<References Name="[dbo].[Entrevistas]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="4" />
+		</Element>
+		<Element Type="SqlPrimaryKeyConstraint">
+			<Relationship Name="ColumnSpecifications">
+				<Entry>
+					<Element Type="SqlIndexedColumnSpecification">
+						<Relationship Name="Column">
+							<Entry>
+								<References Name="[dbo].[TipoEscolaridade].[Id]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="DefiningTable">
+				<Entry>
+					<References Name="[dbo].[TipoEscolaridade]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="5" />
+		</Element>
+		<Element Type="SqlPrimaryKeyConstraint">
+			<Relationship Name="ColumnSpecifications">
+				<Entry>
+					<Element Type="SqlIndexedColumnSpecification">
+						<Relationship Name="Column">
+							<Entry>
+								<References Name="[dbo].[Candidato].[Id]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="DefiningTable">
+				<Entry>
+					<References Name="[dbo].[Candidato]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="6" />
+		</Element>
+		<Element Type="SqlProcedure" Name="[dbo].[AddAvaliacaoEntrevista]">
+			<Property Name="BodyScript">
+				<Value><![CDATA[
+	UPDATE Entrevistas
+	SET EscalaAvaliacaoId = @EscalaAvaliacaoId,
+		Descricao = @Descricao
+	WHERE Id = @EntrevistaId
+RETURN 0]]></Value>
+			</Property>
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="BodyDependencies">
+				<Entry>
+					<References Name="[dbo].[Entrevistas]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Entrevistas].[EscalaAvaliacaoId]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[AddAvaliacaoEntrevista].[@EscalaAvaliacaoId]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Entrevistas].[Descricao]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[AddAvaliacaoEntrevista].[@Descricao]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Entrevistas].[Id]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[AddAvaliacaoEntrevista].[@EntrevistaId]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Parameters">
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[AddAvaliacaoEntrevista].[@EntrevistaId]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[AddAvaliacaoEntrevista].[@EscalaAvaliacaoId]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[AddAvaliacaoEntrevista].[@Descricao]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="200" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[nvarchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SysCommentsObjectAnnotation">
+				<Property Name="Length" Value="255" />
+				<Property Name="StartLine" Value="1" />
+				<Property Name="StartColumn" Value="1" />
+				<Property Name="HeaderContents" Value="CREATE PROCEDURE [dbo].[AddAvaliacaoEntrevista]&#xD;&#xA;&#x9;@EntrevistaId INT,&#xD;&#xA;&#x9;@EscalaAvaliacaoId INT,&#xD;&#xA;&#x9;@Descricao NVARCHAR(200)&#xD;&#xA;AS" />
+			</Annotation>
+		</Element>
+		<Element Type="SqlTable" Name="[dbo].[Candidato]">
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="Columns">
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[Candidato].[Id]">
+						<Property Name="IsNullable" Value="False" />
+						<Property Name="IsIdentity" Value="True" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+						<AttachedAnnotation Disambiguator="6" />
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[Candidato].[Nome]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="50" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[nvarchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[Candidato].[Nif]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="50" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[nvarchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[Candidato].[DataNasc]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[date]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[Candidato].[TipoEscolaridadeId]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="7" />
+		</Element>
+		<Element Type="SqlIndex" Name="[dbo].[Candidato].[IX_Candidato_Nif]">
+			<Property Name="IsUnique" Value="True" />
+			<Relationship Name="ColumnSpecifications">
+				<Entry>
+					<Element Type="SqlIndexedColumnSpecification">
+						<Relationship Name="Column">
+							<Entry>
+								<References Name="[dbo].[Candidato].[Nif]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="IndexedObject">
+				<Entry>
+					<References Name="[dbo].[Candidato]" />
+				</Entry>
+			</Relationship>
+		</Element>
+		<Element Type="SqlProcedure" Name="[dbo].[CreateCandidato]">
+			<Property Name="BodyScript">
+				<Value><![CDATA[
+	INSERT INTO Candidato
+	(Nome, Nif, DataNasc, TipoEscolaridadeId)
+	VALUES
+	(@Nome, @Nif, @DataNasc, @TipoEscolaridadeId)
+
+RETURN 0]]></Value>
+			</Property>
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="BodyDependencies">
+				<Entry>
+					<References Name="[dbo].[Candidato]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Candidato].[Nome]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Candidato].[Nif]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Candidato].[DataNasc]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Candidato].[TipoEscolaridadeId]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[CreateCandidato].[@Nome]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[CreateCandidato].[@Nif]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[CreateCandidato].[@DataNasc]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[CreateCandidato].[@TipoEscolaridadeId]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Parameters">
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[CreateCandidato].[@Nome]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="50" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[nvarchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[CreateCandidato].[@Nif]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="9" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[nvarchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[CreateCandidato].[@DataNasc]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[date]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[CreateCandidato].[@TipoEscolaridadeId]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SysCommentsObjectAnnotation">
+				<Property Name="Length" Value="291" />
+				<Property Name="StartLine" Value="1" />
+				<Property Name="StartColumn" Value="1" />
+				<Property Name="HeaderContents" Value="CREATE PROCEDURE [dbo].[CreateCandidato]&#xD;&#xA;&#x9;@Nome       NVARCHAR (50),&#xD;&#xA;    @Nif        NVARCHAR (9),&#xD;&#xA;    @DataNasc&#x9;DATE,&#xD;&#xA;    @TipoEscolaridadeId INT&#xD;&#xA;AS" />
+			</Annotation>
+		</Element>
+		<Element Type="SqlProcedure" Name="[dbo].[CreateEntrevista]">
+			<Property Name="BodyScript">
+				<Value><![CDATA[
+	INSERT INTO Entrevistas
+	(CandidatoId, DataHora)
+	VALUES
+	(@CandidatoId, @DataHora)
+
+RETURN 0]]></Value>
+			</Property>
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="BodyDependencies">
+				<Entry>
+					<References Name="[dbo].[Entrevistas]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Entrevistas].[CandidatoId]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Entrevistas].[DataHora]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[CreateEntrevista].[@CandidatoId]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[CreateEntrevista].[@DataHora]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Parameters">
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[CreateEntrevista].[@CandidatoId]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[CreateEntrevista].[@DataHora]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[datetime]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SysCommentsObjectAnnotation">
+				<Property Name="Length" Value="195" />
+				<Property Name="StartLine" Value="1" />
+				<Property Name="StartColumn" Value="1" />
+				<Property Name="HeaderContents" Value="CREATE PROCEDURE [dbo].[CreateEntrevista]&#xD;&#xA;&#x9;@CandidatoId  INT,&#xD;&#xA;    @DataHora     DATETIME&#xD;&#xA;AS" />
+			</Annotation>
+		</Element>
+		<Element Type="SqlProcedure" Name="[dbo].[DeleteCandidato]">
+			<Property Name="BodyScript">
+				<Value><![CDATA[
+	DELETE Candidato
+	WHERE Id = @CandidatoId
+RETURN 0]]></Value>
+			</Property>
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="BodyDependencies">
+				<Entry>
+					<References Name="[dbo].[Candidato]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Candidato].[Id]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[DeleteCandidato].[@CandidatoId]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Parameters">
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[DeleteCandidato].[@CandidatoId]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SysCommentsObjectAnnotation">
+				<Property Name="Length" Value="120" />
+				<Property Name="StartLine" Value="1" />
+				<Property Name="StartColumn" Value="1" />
+				<Property Name="HeaderContents" Value="CREATE PROCEDURE [dbo].[DeleteCandidato]&#xD;&#xA;&#x9;@CandidatoId&#x9;&#x9;&#x9;INT&#xD;&#xA;AS" />
+			</Annotation>
+		</Element>
+		<Element Type="SqlProcedure" Name="[dbo].[DeleteEntrevista]">
+			<Property Name="BodyScript">
+				<Value><![CDATA[
+	DELETE Entrevistas 
+	WHERE Id = @EntrevistaId
+RETURN 0]]></Value>
+			</Property>
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="BodyDependencies">
+				<Entry>
+					<References Name="[dbo].[Entrevistas]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Entrevistas].[Id]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[DeleteEntrevista].[@EntrevistaId]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Parameters">
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[DeleteEntrevista].[@EntrevistaId]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SysCommentsObjectAnnotation">
+				<Property Name="Length" Value="124" />
+				<Property Name="StartLine" Value="1" />
+				<Property Name="StartColumn" Value="1" />
+				<Property Name="HeaderContents" Value="CREATE PROCEDURE [dbo].[DeleteEntrevista]&#xD;&#xA;&#x9;@EntrevistaId INT&#xD;&#xA;AS" />
+			</Annotation>
+		</Element>
+		<Element Type="SqlTable" Name="[dbo].[Entrevistas]">
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="Columns">
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[Entrevistas].[Id]">
+						<Property Name="IsNullable" Value="False" />
+						<Property Name="IsIdentity" Value="True" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+						<AttachedAnnotation Disambiguator="4" />
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[Entrevistas].[CandidatoId]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[Entrevistas].[DataHora]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[datetime]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[Entrevistas].[EscalaAvaliacaoId]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[Entrevistas].[Descricao]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="200" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[nvarchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="8" />
+		</Element>
+		<Element Type="SqlTable" Name="[dbo].[EscalaAvaliacao]">
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="Columns">
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[EscalaAvaliacao].[Id]">
+						<Property Name="IsNullable" Value="False" />
+						<Property Name="IsIdentity" Value="True" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+						<AttachedAnnotation Disambiguator="3" />
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[EscalaAvaliacao].[Descricao]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="10" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[nvarchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[EscalaAvaliacao].[Nota]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="10" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[nvarchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+		</Element>
+		<Element Type="SqlForeignKeyConstraint" Name="[dbo].[FK_Candidato_TipoEscolaridade]">
+			<Relationship Name="Columns">
+				<Entry>
+					<References Name="[dbo].[Candidato].[TipoEscolaridadeId]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="DefiningTable">
+				<Entry>
+					<References Name="[dbo].[Candidato]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="ForeignColumns">
+				<Entry>
+					<References Name="[dbo].[TipoEscolaridade].[Id]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="ForeignTable">
+				<Entry>
+					<References Name="[dbo].[TipoEscolaridade]" />
+				</Entry>
+			</Relationship>
+			<AttachedAnnotation Disambiguator="7" />
+		</Element>
+		<Element Type="SqlForeignKeyConstraint" Name="[dbo].[FK_Entrevistas_EscalaAvaliacao]">
+			<Relationship Name="Columns">
+				<Entry>
+					<References Name="[dbo].[Entrevistas].[EscalaAvaliacaoId]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="DefiningTable">
+				<Entry>
+					<References Name="[dbo].[Entrevistas]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="ForeignColumns">
+				<Entry>
+					<References Name="[dbo].[EscalaAvaliacao].[Id]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="ForeignTable">
+				<Entry>
+					<References Name="[dbo].[EscalaAvaliacao]" />
+				</Entry>
+			</Relationship>
+			<AttachedAnnotation Disambiguator="8" />
+		</Element>
+		<Element Type="SqlProcedure" Name="[dbo].[GetCandidatos]">
+			<Property Name="BodyScript">
+				<Value><![CDATA[
+	SELECT  [Candidato].Id,
+			[Nome],
+			[Nif],
+			[DataNasc],
+			[TipoEscolaridadeId],
+			[Descricao]
+	FROM Candidato
+	INNER JOIN TipoEscolaridade ON Candidato.TipoEscolaridadeId = TipoEscolaridade.Id
+	WHERE ((Candidato.Nome = @Nome AND @Nome <> '') OR @Nome = '')
+	AND ((Candidato.Nif = @Nif AND @Nif <> '') OR @Nif = '')
+
+
+RETURN 0]]></Value>
+			</Property>
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="BodyDependencies">
+				<Entry>
+					<References Name="[dbo].[Candidato]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[TipoEscolaridade]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Candidato].[TipoEscolaridadeId]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[TipoEscolaridade].[Id]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Candidato].[Id]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Candidato].[Nome]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Candidato].[Nif]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Candidato].[DataNasc]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Candidato].[TipoEscolaridadeId]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[TipoEscolaridade].[Descricao]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Candidato].[Nome]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[GetCandidatos].[@Nome]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Candidato].[Nif]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[GetCandidatos].[@Nif]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Parameters">
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[GetCandidatos].[@Nome]">
+						<Property Name="DefaultExpressionScript">
+							<Value><![CDATA['']]></Value>
+						</Property>
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="50" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[nvarchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[GetCandidatos].[@Nif]">
+						<Property Name="DefaultExpressionScript">
+							<Value><![CDATA['']]></Value>
+						</Property>
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="9" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[nvarchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SysCommentsObjectAnnotation">
+				<Property Name="Length" Value="439" />
+				<Property Name="StartLine" Value="1" />
+				<Property Name="StartColumn" Value="1" />
+				<Property Name="HeaderContents" Value="CREATE PROCEDURE [dbo].[GetCandidatos]&#xD;&#xA;&#x9;@Nome nVarchar(50) = '',&#xD;&#xA;&#x9;@Nif nVarchar(9) = ''&#xD;&#xA;AS" />
+			</Annotation>
+		</Element>
+		<Element Type="SqlProcedure" Name="[dbo].[GetEntrevistas]">
+			<Property Name="BodyScript">
+				<Value><![CDATA[
+	SELECT Entrevistas.Id,
+			CandidatoId,
+			Nome,
+			Nif,
+			DataHora,
+			EscalaAvaliacaoId,
+			EscalaAvaliacao.Descricao AS EscaDescricao,
+			Nota,
+			Entrevistas.Descricao AS EntDescricao
+	FROM Entrevistas
+	INNER JOIN Candidato ON Entrevistas.CandidatoId = Candidato.Id
+	LEFT JOIN EscalaAvaliacao ON EscalaAvaliacao.Id = Entrevistas.EscalaAvaliacaoId
+	WHERE ((Candidato.Id =  @CandidatoId AND @CandidatoId <> 0) OR @CandidatoId = 0)
+RETURN 0]]></Value>
+			</Property>
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="BodyDependencies">
+				<Entry>
+					<References Name="[dbo].[Entrevistas]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Candidato]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Entrevistas].[CandidatoId]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Candidato].[Id]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[EscalaAvaliacao]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[EscalaAvaliacao].[Id]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Entrevistas].[EscalaAvaliacaoId]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Entrevistas].[Id]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Entrevistas].[CandidatoId]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Candidato].[Nome]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Candidato].[Nif]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Entrevistas].[DataHora]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Entrevistas].[EscalaAvaliacaoId]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[EscalaAvaliacao].[Descricao]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[EscalaAvaliacao].[Nota]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Entrevistas].[Descricao]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Candidato].[Id]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[GetEntrevistas].[@CandidatoId]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Parameters">
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[GetEntrevistas].[@CandidatoId]">
+						<Property Name="DefaultExpressionScript">
+							<Value><![CDATA[0]]></Value>
+						</Property>
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SysCommentsObjectAnnotation">
+				<Property Name="Length" Value="523" />
+				<Property Name="StartLine" Value="1" />
+				<Property Name="StartColumn" Value="1" />
+				<Property Name="HeaderContents" Value="CREATE PROCEDURE [dbo].[GetEntrevistas]&#xD;&#xA;&#x9;@CandidatoId int = 0&#xD;&#xA;AS" />
+			</Annotation>
+		</Element>
+		<Element Type="SqlProcedure" Name="[dbo].[GetEscalaAvaliacao]">
+			<Property Name="BodyScript">
+				<Value><![CDATA[
+	SELECT Id,
+		   Descricao,
+		   Nota
+	FROM EscalaAvaliacao
+RETURN 0]]></Value>
+			</Property>
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="BodyDependencies">
+				<Entry>
+					<References Name="[dbo].[EscalaAvaliacao]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[EscalaAvaliacao].[Id]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[EscalaAvaliacao].[Descricao]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[EscalaAvaliacao].[Nota]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SysCommentsObjectAnnotation">
+				<Property Name="Length" Value="124" />
+				<Property Name="StartLine" Value="1" />
+				<Property Name="StartColumn" Value="1" />
+				<Property Name="HeaderContents" Value="CREATE PROCEDURE [dbo].[GetEscalaAvaliacao]&#xD;&#xA;&#x9;&#xD;&#xA;AS" />
+			</Annotation>
+		</Element>
+		<Element Type="SqlProcedure" Name="[dbo].[GetTipoEscolaridade]">
+			<Property Name="BodyScript">
+				<Value><![CDATA[
+	SELECT  Id,
+			Descricao
+	FROM TipoEscolaridade
+RETURN 0]]></Value>
+			</Property>
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="BodyDependencies">
+				<Entry>
+					<References Name="[dbo].[TipoEscolaridade]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[TipoEscolaridade].[Id]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[TipoEscolaridade].[Descricao]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SysCommentsObjectAnnotation">
+				<Property Name="Length" Value="112" />
+				<Property Name="StartLine" Value="1" />
+				<Property Name="StartColumn" Value="1" />
+				<Property Name="HeaderContents" Value="CREATE PROCEDURE [dbo].[GetTipoEscolaridade]&#xD;&#xA;&#xD;&#xA;AS" />
+			</Annotation>
+		</Element>
+		<Element Type="SqlTable" Name="[dbo].[TipoEscolaridade]">
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="Columns">
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[TipoEscolaridade].[Id]">
+						<Property Name="IsNullable" Value="False" />
+						<Property Name="IsIdentity" Value="True" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+						<AttachedAnnotation Disambiguator="5" />
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[TipoEscolaridade].[Descricao]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="50" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[nvarchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+		</Element>
+		<Element Type="SqlProcedure" Name="[dbo].[UpdateCandidato]">
+			<Property Name="BodyScript">
+				<Value><![CDATA[
+	UPDATE Candidato
+	SET DataNasc = @DataNasc,
+		Nif = @Nif,
+		Nome = @Nome,
+		TipoEscolaridadeId = @TipoEscolaridadeId
+	WHERE Id = @CandidatoId
+
+RETURN 0]]></Value>
+			</Property>
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="BodyDependencies">
+				<Entry>
+					<References Name="[dbo].[Candidato]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Candidato].[DataNasc]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[UpdateCandidato].[@DataNasc]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Candidato].[Nif]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[UpdateCandidato].[@Nif]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Candidato].[Nome]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[UpdateCandidato].[@Nome]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Candidato].[TipoEscolaridadeId]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[UpdateCandidato].[@TipoEscolaridadeId]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Candidato].[Id]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[UpdateCandidato].[@CandidatoId]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Parameters">
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[UpdateCandidato].[@CandidatoId]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[UpdateCandidato].[@Nome]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="50" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[nvarchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[UpdateCandidato].[@Nif]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="9" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[nvarchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[UpdateCandidato].[@DataNasc]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[date]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[UpdateCandidato].[@TipoEscolaridadeId]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SysCommentsObjectAnnotation">
+				<Property Name="Length" Value="317" />
+				<Property Name="StartLine" Value="1" />
+				<Property Name="StartColumn" Value="1" />
+				<Property Name="HeaderContents" Value="CREATE PROCEDURE [dbo].[UpdateCandidato]&#xD;&#xA;&#x9;@CandidatoId&#x9;INT,&#xD;&#xA;&#x9;@Nome&#x9;&#x9;&#x9;NVARCHAR(50),&#x9;&#xD;&#xA;&#x9;@Nif&#x9;&#x9;&#x9;NVARCHAR(9),&#xD;&#xA;&#x9;@DataNasc&#x9;&#x9;DATE,&#xD;&#xA;&#x9;@TipoEscolaridadeId INT&#xD;&#xA;AS" />
+			</Annotation>
+		</Element>
+		<Element Type="SqlProcedure" Name="[dbo].[UpdateEntrevista]">
+			<Property Name="BodyScript">
+				<Value><![CDATA[
+	UPDATE Entrevistas
+	SET DataHora = @DataHora
+	WHERE Id = @EntrevistaId
+RETURN 0]]></Value>
+			</Property>
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="BodyDependencies">
+				<Entry>
+					<References Name="[dbo].[Entrevistas]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Entrevistas].[DataHora]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[UpdateEntrevista].[@DataHora]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Entrevistas].[Id]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[UpdateEntrevista].[@EntrevistaId]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Parameters">
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[UpdateEntrevista].[@EntrevistaId]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[UpdateEntrevista].[@DataHora]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[datetime]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SysCommentsObjectAnnotation">
+				<Property Name="Length" Value="176" />
+				<Property Name="StartLine" Value="1" />
+				<Property Name="StartColumn" Value="1" />
+				<Property Name="HeaderContents" Value="CREATE PROCEDURE [dbo].[UpdateEntrevista]&#xD;&#xA;&#x9;@EntrevistaId INT,&#xD;&#xA;&#x9;@DataHora     DATETIME&#xD;&#xA;AS" />
+			</Annotation>
+		</Element>
+	</Model>
+</DataSchemaModel>

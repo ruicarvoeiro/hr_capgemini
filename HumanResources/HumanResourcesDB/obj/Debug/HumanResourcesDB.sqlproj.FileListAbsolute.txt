@@ -1,0 +1,10 @@
+C:\JREQUIO\Capgemini\Formação\(dot)Net\2018_09_06\Projecto\HumanResources\HumanResourcesDB\bin\Debug\HumanResourcesDB.dacpac
+C:\JREQUIO\Capgemini\Formação\(dot)Net\2018_09_06\Projecto\HumanResources\HumanResourcesDB\bin\Debug\HumanResourcesDB.dll
+C:\JREQUIO\Capgemini\Formação\(dot)Net\2018_09_06\Projecto\HumanResources\HumanResourcesDB\bin\Debug\HumanResourcesDB.pdb
+C:\JREQUIO\Capgemini\Formação\(dot)Net\2018_09_06\Projecto\HumanResources\HumanResourcesDB\obj\Debug\HumanResourcesDB.sqlprojAssemblyReference.cache
+C:\JREQUIO\Capgemini\Formação\(dot)Net\2018_09_06\Projecto\HumanResources\HumanResourcesDB\obj\Debug\Model.xml
+C:\JREQUIO\Capgemini\Formação\(dot)Net\2018_09_06\Projecto\HumanResources\HumanResourcesDB\obj\Debug\refactor.xml
+C:\JREQUIO\Capgemini\Formação\(dot)Net\2018_09_06\Projecto\HumanResources\HumanResourcesDB\obj\Debug\postdeploy.sql
+C:\JREQUIO\Capgemini\Formação\(dot)Net\2018_09_06\Projecto\HumanResources\HumanResourcesDB\obj\Debug\predeploy.sql
+C:\JREQUIO\Capgemini\Formação\(dot)Net\2018_09_06\Projecto\HumanResources\HumanResourcesDB\obj\Debug\HumanResourcesDB.dll
+C:\JREQUIO\Capgemini\Formação\(dot)Net\2018_09_06\Projecto\HumanResources\HumanResourcesDB\obj\Debug\HumanResourcesDB.pdb

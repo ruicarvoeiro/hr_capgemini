@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Operations Version="1.0">
+  <Operation Name="Rename Refactor" Key="152e669d-58d2-4877-b923-c3c7fb7dd2f3" ChangeDateTime="09/06/2018 08:53:32" xmlns="http://schemas.microsoft.com/sqlserver/dac/Serialization/2012/02">
+    <Property Name="ElementName" Value="[dbo].[Candidato].[Idade]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Candidato]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="DataNasc" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="809115a1-9819-4ed8-8b45-10e8848a0e56" ChangeDateTime="09/06/2018 09:07:34" xmlns="http://schemas.microsoft.com/sqlserver/dac/Serialization/2012/02">
+    <Property Name="ElementName" Value="[dbo].[EscalaAvaliacao].[Desc]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[EscalaAvaliacao]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="DescRICAO" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="7374ee91-8cc2-4c12-b9cb-733ff7b8e37a" ChangeDateTime="09/06/2018 09:07:40" xmlns="http://schemas.microsoft.com/sqlserver/dac/Serialization/2012/02">
+    <Property Name="ElementName" Value="[dbo].[EscalaAvaliacao].[DescRICAO]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[EscalaAvaliacao]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="Descricao" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="4949f90f-b581-49e5-b5dd-6ce65c811e90" ChangeDateTime="09/06/2018 09:12:41" xmlns="http://schemas.microsoft.com/sqlserver/dac/Serialization/2012/02">
+    <Property Name="ElementName" Value="[dbo].[Entrevistas].[Avaliacao]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Entrevistas]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="EscalaAvaliacaoId" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="4cf6bb4e-e9b3-43ec-ad7d-aee30b29f2e1" ChangeDateTime="09/06/2018 09:25:02" xmlns="http://schemas.microsoft.com/sqlserver/dac/Serialization/2012/02">
+    <Property Name="ElementName" Value="[dbo].[Candidato].[IX_Candidato_Column]" />
+    <Property Name="ElementType" Value="SqlIndex" />
+    <Property Name="ParentElementName" Value="[dbo].[Candidato]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="[IX_Candidato_Nif]" />
+  </Operation>
+</Operations>

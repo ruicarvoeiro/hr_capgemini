@@ -1,0 +1,30 @@
+C:\Users\rcarvoei\source\repos\HR_DAL\WCFDAL\bin\WCFDAL.dll.config
+C:\Users\rcarvoei\source\repos\HR_DAL\WCFDAL\bin\WCFDAL.dll
+C:\Users\rcarvoei\source\repos\HR_DAL\WCFDAL\bin\WCFDAL.pdb
+C:\Users\rcarvoei\source\repos\HR_DAL\WCFDAL\bin\HR_DAL.dll
+C:\Users\rcarvoei\source\repos\HR_DAL\WCFDAL\bin\HR_DAL.pdb
+C:\Users\rcarvoei\source\repos\HR_DAL\WCFDAL\obj\Debug\WCFDAL.csprojAssemblyReference.cache
+C:\Users\rcarvoei\source\repos\HR_DAL\WCFDAL\obj\Debug\WCFDAL.csproj.CoreCompileInputs.cache
+C:\Users\rcarvoei\source\repos\HR_DAL\WCFDAL\obj\Debug\WCFDAL.csproj.CopyComplete
+C:\Users\rcarvoei\source\repos\HR_DAL\WCFDAL\obj\Debug\WCFDAL.dll
+C:\Users\rcarvoei\source\repos\HR_DAL\WCFDAL\obj\Debug\WCFDAL.pdb
+D:\Projetos\20180919\HR_DAL\WCFDAL\bin\WCFDAL.dll.config
+D:\Projetos\20180919\HR_DAL\WCFDAL\bin\WCFDAL.dll
+D:\Projetos\20180919\HR_DAL\WCFDAL\bin\WCFDAL.pdb
+D:\Projetos\20180919\HR_DAL\WCFDAL\bin\HR_DAL.dll
+D:\Projetos\20180919\HR_DAL\WCFDAL\bin\HR_DAL.pdb
+D:\Projetos\20180919\HR_DAL\WCFDAL\obj\Debug\WCFDAL.csprojAssemblyReference.cache
+D:\Projetos\20180919\HR_DAL\WCFDAL\obj\Debug\WCFDAL.csproj.CoreCompileInputs.cache
+D:\Projetos\20180919\HR_DAL\WCFDAL\obj\Debug\WCFDAL.csproj.CopyComplete
+D:\Projetos\20180919\HR_DAL\WCFDAL\obj\Debug\WCFDAL.dll
+D:\Projetos\20180919\HR_DAL\WCFDAL\obj\Debug\WCFDAL.pdb
+D:\Projetos\Projeto_final .net\HR_DAL\WCFDAL\bin\WCFDAL.dll.config
+D:\Projetos\Projeto_final .net\HR_DAL\WCFDAL\bin\WCFDAL.dll
+D:\Projetos\Projeto_final .net\HR_DAL\WCFDAL\bin\WCFDAL.pdb
+D:\Projetos\Projeto_final .net\HR_DAL\WCFDAL\bin\HR_DAL.dll
+D:\Projetos\Projeto_final .net\HR_DAL\WCFDAL\bin\HR_DAL.pdb
+D:\Projetos\Projeto_final .net\HR_DAL\WCFDAL\obj\Debug\WCFDAL.csprojAssemblyReference.cache
+D:\Projetos\Projeto_final .net\HR_DAL\WCFDAL\obj\Debug\WCFDAL.csproj.CoreCompileInputs.cache
+D:\Projetos\Projeto_final .net\HR_DAL\WCFDAL\obj\Debug\WCFDAL.csproj.CopyComplete
+D:\Projetos\Projeto_final .net\HR_DAL\WCFDAL\obj\Debug\WCFDAL.dll
+D:\Projetos\Projeto_final .net\HR_DAL\WCFDAL\obj\Debug\WCFDAL.pdb

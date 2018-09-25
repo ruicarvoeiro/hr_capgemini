@@ -1,0 +1,18 @@
+C:\Users\rcarvoei\source\repos\HR_DAL\HR_DAL\bin\Debug\HR_DAL.dll
+C:\Users\rcarvoei\source\repos\HR_DAL\HR_DAL\bin\Debug\HR_DAL.pdb
+C:\Users\rcarvoei\source\repos\HR_DAL\HR_DAL\obj\Debug\HR_DAL.csprojAssemblyReference.cache
+C:\Users\rcarvoei\source\repos\HR_DAL\HR_DAL\obj\Debug\HR_DAL.csproj.CoreCompileInputs.cache
+C:\Users\rcarvoei\source\repos\HR_DAL\HR_DAL\obj\Debug\HR_DAL.dll
+C:\Users\rcarvoei\source\repos\HR_DAL\HR_DAL\obj\Debug\HR_DAL.pdb
+D:\Projetos\20180919\HR_DAL\HR_DAL\bin\Debug\HR_DAL.dll
+D:\Projetos\20180919\HR_DAL\HR_DAL\bin\Debug\HR_DAL.pdb
+D:\Projetos\20180919\HR_DAL\HR_DAL\obj\Debug\HR_DAL.csproj.CoreCompileInputs.cache
+D:\Projetos\20180919\HR_DAL\HR_DAL\obj\Debug\HR_DAL.dll
+D:\Projetos\20180919\HR_DAL\HR_DAL\obj\Debug\HR_DAL.pdb
+D:\Projetos\20180919\HR_DAL\HR_DAL\obj\Debug\HR_DAL.csprojAssemblyReference.cache
+D:\Projetos\Projeto_final .net\HR_DAL\HR_DAL\bin\Debug\HR_DAL.dll
+D:\Projetos\Projeto_final .net\HR_DAL\HR_DAL\bin\Debug\HR_DAL.pdb
+D:\Projetos\Projeto_final .net\HR_DAL\HR_DAL\obj\Debug\HR_DAL.csprojAssemblyReference.cache
+D:\Projetos\Projeto_final .net\HR_DAL\HR_DAL\obj\Debug\HR_DAL.csproj.CoreCompileInputs.cache
+D:\Projetos\Projeto_final .net\HR_DAL\HR_DAL\obj\Debug\HR_DAL.dll
+D:\Projetos\Projeto_final .net\HR_DAL\HR_DAL\obj\Debug\HR_DAL.pdb
